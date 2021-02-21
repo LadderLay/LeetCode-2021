@@ -1,17 +1,24 @@
 class Solution {
 public:
-    int pivotIndex(vector<int>& nums) {
-        int left = 0, right = 0;
-        int n = nums.size();
-        for(int i=0; i<n; i++) {
-            right += nums[i];
+    int findKthLargest(vector<int>& nums, int k) {
+        return quickFind(nums, 0, nums.size(), k);
+    }
+    int quickFind(vector<int>& nums, int l, int r, int k) {
+        int keyLoc = l + rand() % (r - l);
+        swap(nums[keyLoc], nums[l]);
+        int key = nums[l];
+        int start = l, end = r-1;
+        while(start < end) {
+            while(start<end && nums[end]>=key)  end--;
+            nums[start] = nums[end];
+            while(start<end && nums[start]<=key)   start++;
+            nums[end] = nums[start];
         }
-        for(int i=0; i<n; i++) {
-            left += i==0 ? 0 : nums[i-1];
-            right -= nums[i];
-            if(left == right)
-                return i;
-        }
-        return -1;
+        nums[start] = key;
+        if(start == r-k) return nums[start];
+        else if(start>r-k) return quickFind(nums,l,start,k-(r-start));
+        else return quickFind(nums,start+1,r,k);
     }
 };
+
+//快速选择+随机化
