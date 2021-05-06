@@ -46,3 +46,9 @@ Leetcode题号：
 Leetcode题号：
 [3]()
 
+# 动态规划类型题
+
+## 打家劫舍
+[打家劫舍 - 1](https://leetcode-cn.com/problems/house-robber/)
+[删除获得的点数计算](https://leetcode-cn.com/problems/delete-and-earn/)
+[]()

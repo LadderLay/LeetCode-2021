@@ -2,14 +2,14 @@
  * @param {number} x
  * @return {number}
  */
-var reverse = function(x) {
-    let tag = 0, res = 0;
+ var reverse = function(x) {
+    const max = Math.pow(2,31)-1, min = -Math.pow(2,31);
+    let res = 0;
     while(x) {
-        res = res * 10 + x % 10;
-        x = parseInt(x / 10);
-        if(res > Math.pow(2, 31)-1 || res < -Math.pow(2, 31)) {
+        res = res*10 + x % 10;
+        x = ~~(x/10);
+        if(res > max || res < min)
             return 0;
-        }
     }
     return res;
 };
