@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 
- // 1.快慢指针
+
 var getKthFromEnd = function(head, k) {
     let cnt = 0;
     let front = head, end = head;
@@ -25,3 +25,16 @@ var getKthFromEnd = function(head, k) {
     }
     return end;
 }
+
+//快慢指针
+var getKthFromEnd = function(head, k) {
+    let fast = head, slow = head;
+    while(k--) {
+        fast = fast. next;
+    }
+    while(fast) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+    return slow;
+};
