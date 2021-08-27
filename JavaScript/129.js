@@ -22,3 +22,15 @@
     }
     return dfs(root,0);
 };
+
+var sumNumbers = function(root) {
+    const dfs = (node, val) => {
+        if(!node)   
+            return 0;
+        val = val * 10 + node.val;
+        if(!node.left && !node.right)
+            return val;
+        return dfs(node.left, val) + dfs(node.right, val);
+    }
+    return dfs(root, 0);
+};
