@@ -29,3 +29,21 @@
     return res;
 
 };
+
+
+ var levelOrder = function(root) {
+    let res = [];
+    if(!root)   return res;
+    let stack = [root];
+    while(stack.length !== 0) {
+        res.push([]);
+        let len = stack.length;
+        for(let i=0; i<len; ++i) {
+            const node = stack.shift();
+            if(node.left)   stack.push(node.left);
+            if(node.right)  stack.push(node.right);
+            res[res.length-1].push(node.val);
+        }
+    }
+    return res;
+};
