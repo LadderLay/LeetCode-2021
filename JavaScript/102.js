@@ -10,6 +10,10 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
+// 层序遍历二叉树
+// binary tree
+// level 水平的
+
  var levelOrder = function(root) {
     if(!root)
         return [];
