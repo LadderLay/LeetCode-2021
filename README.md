@@ -1,5 +1,5 @@
 ## 栈
-常见问题：括号匹配
+常见问题：括号匹配; 2sum;
 # 刷题笔记
 
 ## JavaScript
@@ -48,7 +48,17 @@ Leetcode题号：
 
 # 动态规划类型题
 
+## 背包问题
+[背包九讲](https://www.kancloud.cn/kancloud/pack/70125)
+
+0-1背包
+[分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
+完全背包
 ## 打家劫舍
 [打家劫舍 - 1](https://leetcode-cn.com/problems/house-robber/)
 [删除获得的点数计算](https://leetcode-cn.com/problems/delete-and-earn/)
 []()
+
+
+# 常见单词积累
+positive integers 正整数
